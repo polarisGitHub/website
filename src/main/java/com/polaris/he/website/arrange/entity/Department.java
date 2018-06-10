@@ -21,7 +21,4 @@ public class Department {
 
     // 科目名称
     private String name;
-
-    // 最低人数
-    private int needStudents;
 }
