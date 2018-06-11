@@ -1,9 +1,11 @@
 package com.polaris.he.website.arrange.entity;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
 import java.time.LocalDate;
-import java.util.List;
 
 /**
  * 从begin到end日期中，department安排了school，包含students
@@ -14,21 +16,16 @@ import java.util.List;
 @Getter
 @Setter
 @ToString
-@RequiredArgsConstructor
-public class ArrangedDepartment {
+@AllArgsConstructor
+public class Arranged {
 
-    @NonNull
     private Department department;
 
-    @NonNull
     private School school;
 
+    private Student student;
 
-    private List<Student> students;
-
-    @NonNull
     private LocalDate begin;
 
-    @NonNull
     private LocalDate end;
 }

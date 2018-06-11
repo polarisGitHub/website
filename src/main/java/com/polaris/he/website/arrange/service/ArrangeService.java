@@ -1,6 +1,7 @@
 package com.polaris.he.website.arrange.service;
 
-import com.polaris.he.website.arrange.entity.ScheduledResult;
+import com.polaris.he.website.arrange.entity.ArrangeConfig;
+import com.polaris.he.website.arrange.entity.Arranged;
 import com.polaris.he.website.arrange.entity.School;
 
 import java.util.List;
@@ -18,14 +19,6 @@ public interface ArrangeService {
      * @param students
      * @return
      */
-    ScheduledResult execute(List<School> students);
-
-    /**
-     * 根据排班结果进行微调
-     *
-     * @param detail
-     * @return
-     */
-    ScheduledResult execute(ScheduledResult detail);
+    List<Arranged> execute(List<School> students, ArrangeConfig config);
 
 }
